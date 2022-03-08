@@ -49,33 +49,39 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Je uitkomst - karakteristiek screenshot(s):
   <img src="readme-images/titel.png" width="375px" alt="uitomst opdracht 1">
+  <img src="readme-images/rotate.png" width="375px" alt="uitomst opdracht 1">
   <img src="readme-images/textshadows.png" width="375px" alt="uitomst opdracht 1">
   <img src="readme-images/onder-elkaar.png" width="375px" alt="uitomst opdracht 1">
   <img src="readme-images/stretched.png" width="375px" alt="uitomst opdracht 1">
   <img src="readme-images/burger.png" width="375px" alt="uitomst opdracht 1">
-  <img src="readme-images/burger-omhoog" width="375px" alt="uitomst opdracht 1">
-  <img src="readme-images/burger-omhoog2" width="375px" alt="uitomst opdracht 1">
-  <img src="readme-images/burger-omhoog3" width="375px" alt="uitomst opdracht 1">
+  <img src="readme-images/burger-omhoog.png" width="375px" alt="uitomst opdracht 1">
+  <img src="readme-images/burger-omhoog2.png" width="375px" alt="uitomst opdracht 1">
+  <img src="readme-images/burger-omhoog3.png" width="375px" alt="uitomst opdracht 1">
 
 
   ### Dit ging goed/Heb ik geleerd: 
-  - Ik heb geleerd hoe ik met textshadows een tekst/woorden onder elkaar kan zetten, met hun verschillende kleuren
-    <img src="readme-images/textshadows.png" width="375px" alt="top">
+- Ik heb geleerd hoe ik met textshadows een tekst/woorden onder elkaar kan zetten, met hun verschillende kleuren
+<img src="readme-images/textshadows.png" width="375px" alt="top">
 
-  - Ik heb geleerd hoe je met border-radius een vorm met alleen css kan maken en animeren
-    <img src="readme-images/burger.png" width="375px" alt="top">
+- Ik heb geleerd hoe je met border-radius een vorm met alleen css kan maken en animeren
+<img src="readme-images/burger.png" width="375px" alt="top">
 
-  - Ik heb geleerd hoe ik meerdere animaties op één element kan zetten en laten afspelen
-    <!-- <img src="readme-images/dummy-plaatje.svg" width="375px" alt="top"> -->
+- Ik heb geleerd hoe ik meerdere animaties op één element kan zetten en laten afspelen
+<!-- <img src="readme-images/dummy-plaatje.svg" width="375px" alt="top"> -->
 
-  - Ik heb geleerd hoe ik met transform elementen kan verplaatsen
-    <img src="readme-images/burger-omhoog2.png" width="375px" alt="top">
+- Ik heb geleerd hoe ik met transform elementen kan verplaatsen
+<img src="readme-images/burger-omhoog2.png" width="375px" alt="top">
+
+- Ik heb geleerd hoe je met vmin en vmax elementen responsive kan maken
 
 
   ### Dit was lastig/Is niet gelukt:
-  Korte omschrijving met plaatje(s)
+- Ik vond het lastig om bij de laatste stap de burger en tekst vloeiend uit beeld te laten gaan
+<img src="readme-images/burger-omhoog2.png" width="375px" alt="bummer">
 
-  <img src="readme-images/dummy-plaatje.svg" width="375px" alt="bummer">
+- Het is mij niet gelukt om de eerste stap van mijn storyboard te maken, daarom heb ik deze uiteindelijk toch veranderd
+<img src="readme-images/rotate.png" width="375px" alt="uitomst opdracht 1">
+
 </details>
 
 
