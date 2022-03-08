@@ -1,0 +1,311 @@
+/***********/
+/* imports */
+/***********/
+@font-face {
+    font-family: 'eenfont';
+    src: url("../fonts/eenfont.woff") format('woff');
+}
+
+
+
+
+
+
+/**********/
+/* remedy */
+/**********/
+*, *::after, *::before {
+    box-sizing: border-box;  
+}
+
+
+
+
+
+
+/****************/
+/* custom props */
+/****************/
+:root {
+    --main-font: 'eenfont';
+
+    --background: #F4EBDD;
+    --rood: #d82300;
+    --oranje: #ff8730;
+    --geel: #feaa02;
+    --bruin: #502315;
+    --groen: #1b8639;
+}
+
+
+
+
+
+
+/*************/
+/* container */
+/*************/
+body {
+    background-color: var(--background);
+
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+
+
+
+
+
+/************/
+/* de title */
+/************/
+h1 {
+    position: static;
+    margin: 0;
+
+    /* verplaatst van span naar hier */
+    font-family: var(--main-font);
+    font-size: 13vmin;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--rood);
+}
+
+
+
+
+
+
+/**************/
+/* de woorden */
+/**************/
+span {
+    /* new */
+    display: inline-block;
+    
+    padding: 0 0.1em;
+    text-align: center;
+}
+
+
+
+
+
+
+/**********************************/
+/**********************************/
+/********animaties afspelen********/
+/**********************************/
+/**********************************/
+body:hover h1 {
+    animation-name: rotate-animation, textShadow-animation;
+    animation-duration: 1s, 2s;
+    animation-delay: 0s, 1s;
+    /* niet nodig --> 1 is de default */
+    /* animation-iteration-count: 1; */
+}
+
+body:hover h1 span:first-of-type {
+    animation-name: onderElkaarEerste-animation;
+    animation-duration: 1s;
+    animation-delay: 3s;
+    /* zodat de span aan het einde van de animatie op de laatste keyframe blijft staan */
+    animation-fill-mode: forwards;
+}
+
+/* als je first-of-type gebruikt is het mooi om ook last-of-type te genbruiken */
+body:hover h1 span:last-of-type {
+    animation-name: onderElkaarTweede-animation;
+    animation-duration: 1s;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+}
+
+body:hover ::after {
+    animation-name: hamburgerOnder-animation;
+    animation-duration: 1s;
+    animation-delay: 4s;
+    animation-fill-mode: forwards;
+}
+
+body:hover ::before {
+    animation-name: hamburgerBoven-animation;
+    animation-duration: 1s;
+    animation-delay: 4s;
+    animation-fill-mode: forwards;
+}
+
+
+
+
+
+
+/**********************************/
+/**********************************/
+/**************rotate**************/
+/**********************************/
+/**********************************/
+@keyframes rotate-animation {
+    0% {
+        /* met perspective krijgt de palm een verdwijnpunt :-) */
+        /* met rotateX roteer je de palm om de x-as */
+        transform: perspective(2em) rotateX(0);
+    }
+    100% {
+        transform: perspective(2em) rotateX(1turn);
+    }
+}
+
+
+
+
+
+
+/**********************************/
+/**********************************/
+/************textshadow************/
+/**********************************/
+/**********************************/
+@keyframes textShadow-animation {
+    0% {
+
+    }
+    50% {
+        text-shadow:
+		0 15vmin 0 var(--oranje),
+        0 30vmin 0 var(--geel),
+        0 45vmin 0 var(--bruin),
+        0 60vmin 0 var(--groen),
+		0 -15vmin 0 var(--oranje),
+        0 -30vmin 0 var(--geel),
+        0 -45vmin 0 var(--bruin),
+        0 -60vmin 0 var(--groen);
+    }
+    100% {
+
+    }
+}
+
+
+
+
+
+
+/**********************************/
+/**********************************/
+/***********onder elkaar***********/
+/**********************************/
+/**********************************/
+@keyframes onderElkaarEerste-animation {
+    0% {
+        position: absolute;
+        display: block;
+        width: 100%;
+        left: 0;
+        bottom: 100%;
+    }
+    100% {
+        position: absolute;
+        display: block;
+        width: 100%;
+        left: 0;
+        bottom: calc(50% - 2vmin);
+        font-size: 15vmin;
+    }
+} 
+
+@keyframes onderElkaarTweede-animation {
+    0% {
+        position: absolute;
+        display: block;
+        width: 100%;
+        left: 0;
+        top: 100%;
+    }
+    100% {
+        position: absolute;
+        display: block;
+        width: 100%;
+        left: 0;
+        top: calc(50% - 7vmin);
+        font-size: 25vmin;
+    }
+} 
+
+
+
+
+
+
+/**********************************/
+/**********************************/
+/**************burger**************/
+/**********************************/
+/**********************************/
+h1::before,
+h1::after {
+    content: "";
+    display: block;
+
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+    background-color: var(--oranje);
+    opacity: 0%;
+
+    width: 75vmin;
+    height: 25vmin;
+}
+
+h1::before {
+    bottom: 100%;
+    border-radius: 50% 50% 50% 50% / 100% 100% 25% 25%;
+}
+
+h1::after {
+    top: 100%;
+    border-radius: 50% 50% 50% 50% / 25% 25% 100% 100%;
+} 
+
+
+
+@keyframes hamburgerBoven-animation {
+    0% {
+        
+    }
+    100% {
+        bottom:calc(50% + 13vmin);
+        opacity: 100%;
+    }
+} 
+
+@keyframes hamburgerOnder-animation {
+    0% {
+
+    }    
+    100% {
+        top:calc(50% + 20vmin);
+        opacity: 100%;
+    }
+} 
+
+
+
+
+
+
+/**********************************/
+/**********************************/
+/************responsive************/
+/**********************************/
+/**********************************/
+@media only screen and (max-width: 450px){
+
+}
+
+@media only screen and (min-width: 1000px){
+ 
+}
