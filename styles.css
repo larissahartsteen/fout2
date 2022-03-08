@@ -1,6 +1,8 @@
-/***********/
-/* imports */
-/***********/
+/**********************************/
+/**********************************/
+/**************imports**************/
+/**********************************/
+/**********************************/
 @font-face {
     font-family: 'eenfont';
     src: url("../fonts/eenfont.woff") format('woff');
@@ -11,9 +13,11 @@
 
 
 
-/**********/
-/* remedy */
-/**********/
+/**********************************/
+/**********************************/
+/**************remedy**************/
+/**********************************/
+/**********************************/
 *, *::after, *::before {
     box-sizing: border-box;  
 }
@@ -23,9 +27,11 @@
 
 
 
-/****************/
-/* custom props */
-/****************/
+/**********************************/
+/**********************************/
+/***********custom props***********/
+/**********************************/
+/**********************************/
 :root {
     --main-font: 'eenfont';
 
@@ -42,12 +48,13 @@
 
 
 
-/*************/
-/* container */
-/*************/
+/**********************************/
+/**********************************/
+/***********de container***********/
+/**********************************/
+/**********************************/
 body {
     background-color: var(--background);
-
     height: 100vh;
     display: grid;
     place-items: center;
@@ -58,16 +65,18 @@ body {
 
 
 
-/************/
-/* de title */
-/************/
+/**********************************/
+/**********************************/
+/*************de title*************/
+/**********************************/
+/**********************************/
 h1 {
     position: static;
     margin: 0;
 
     /* verplaatst van span naar hier */
     font-family: var(--main-font);
-    font-size: 13vmin;
+    font-size: 14vmin;
     text-transform: uppercase;
     text-align: center;
     color: var(--rood);
@@ -78,13 +87,13 @@ h1 {
 
 
 
-/**************/
-/* de woorden */
-/**************/
+/**********************************/
+/**********************************/
+/************de woorden************/
+/**********************************/
+/**********************************/
 span {
-    /* new */
     display: inline-block;
-    
     padding: 0 0.1em;
     text-align: center;
 }
@@ -103,37 +112,36 @@ body:hover h1 {
     animation-name: rotate-animation, textShadow-animation;
     animation-duration: 1s, 2s;
     animation-delay: 0s, 1s;
-    /* niet nodig --> 1 is de default */
-    /* animation-iteration-count: 1; */
 }
 
 body:hover h1 span:first-of-type {
-    animation-name: onderElkaarEerste-animation;
-    animation-duration: 1s;
-    animation-delay: 3s;
+    animation-name: onderElkaarEerste-animation, textSquashed-animation;
+    animation-duration: 1s, 4.9s;
+    animation-delay: 3s, 5.12s;
     /* zodat de span aan het einde van de animatie op de laatste keyframe blijft staan */
     animation-fill-mode: forwards;
 }
 
-/* als je first-of-type gebruikt is het mooi om ook last-of-type te genbruiken */
 body:hover h1 span:last-of-type {
-    animation-name: onderElkaarTweede-animation;
-    animation-duration: 1s;
-    animation-delay: 3s;
+    animation-name: onderElkaarTweede-animation, textSquashed-animation;
+    animation-duration: 1s, 5s;
+    animation-delay: 3s, 5.14s;
     animation-fill-mode: forwards;
 }
 
 body:hover ::after {
-    animation-name: hamburgerOnder-animation;
-    animation-duration: 1s;
-    animation-delay: 4s;
+    animation-name: hamburgerSquashedBottom-animation, hamburgerNaarBovenBottom;
+    /* animation-name: hamburgerSquashedBottom-animation, hamburgerBottom-animation; */
+    animation-duration: 2s, 2.5s;
+    animation-delay: 4.5s, 6.55s;
     animation-fill-mode: forwards;
 }
 
 body:hover ::before {
-    animation-name: hamburgerBoven-animation;
-    animation-duration: 1s;
-    animation-delay: 4s;
+    animation-name: hamburgerSquashedTop-animation, hamburgerNaarBovenTop;
+    /* animation-name: hamburgerSquashedTop-animation, hamburgerTop-animation; */
+    animation-duration: 2s, 2s;
+    animation-delay: 4.5s, 7.3s;
     animation-fill-mode: forwards;
 }
 
@@ -236,6 +244,26 @@ body:hover ::before {
 
 
 
+@keyframes textSquashed-animation {
+    0% {
+    
+    }
+    10% {
+        transform: translate(0%, 0%) scaleX(1.05) scaleY(0.7) ;
+    }
+    25% {
+        transform: inherit;
+    }
+    50% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-2000%);
+    }
+}
+
+
+
 
 
 
@@ -272,26 +300,127 @@ h1::after {
 
 
 
-@keyframes hamburgerBoven-animation {
+/* @keyframes hamburgerTop-animation {
     0% {
         
     }
     100% {
-        bottom:calc(50% + 13vmin);
+        bottom: calc(50% + 13vmin);
         opacity: 100%;
     }
 } 
 
-@keyframes hamburgerOnder-animation {
+@keyframes hamburgerBottom-animation {
     0% {
 
     }    
     100% {
-        top:calc(50% + 20vmin);
+        top: calc(50% + 20vmin);
         opacity: 100%;
     }
-} 
+}  */
 
+
+
+@keyframes hamburgerSquashedTop-animation {
+    0%, 100% {
+        transition-time-function: ease-in;
+        bottom: calc(50% + 13vmin);
+        left: 29%;
+        transform: translateX(-71%);
+        opacity: 100%;
+    }
+    0% {
+        transform:  translate(0%, -300%)  scaleX(0.50) scaleY(1.50);
+    }
+    15% {
+        transform:  translate(0%, -197%)  scaleX(0.65) scaleY(1.59);
+    }
+    18% {
+        transform:  translate(0%, -80%)  scaleX(0.8) scaleY(1.75);
+    }
+    35% {
+        transform:  translate(0%, -2%)  scaleX(1.20) scaleY(0.6);
+    }
+/*  46% {
+        transform:  translate(0%, 2%)  scaleX(1.40) scaleY(0.70);
+    } */
+    54% {
+        transform:  translate(0%, 2%)  scaleX(0.80) scaleY(1.20);
+    }
+    66% {
+        transform:  translate(0%, 0%)  scaleX(1.0) scaleY(1);
+    }
+    78% {
+        transform:  translate(0%, 0%)  scaleX(0.95) scaleY(1.05);
+    }
+    100% {
+        transform: inherit;
+    }
+}
+
+@keyframes hamburgerSquashedBottom-animation {
+    0%, 100% {
+        transition-time-function: ease-in;
+        position: absolute;
+        display: block;
+        left: 29%;
+        transform: translateX(-71%);
+        top: calc(50% + 20vmin);
+        opacity: 100%;
+    }
+    0% {
+        transform:  translate(0%, 300%)  scaleX(0.50) scaleY(1.50) ;
+    }
+    15% {
+        transform:  translate(0%, 197%)  scaleX(0.65) scaleY(1.59) ;
+    }
+    18% {
+        transform:  translate(0%, 80%)  scaleX(0.8) scaleY(1.75) ;
+    }
+    35% {
+        transform:  translate(0%, 2%)  scaleX(1.20) scaleY(0.6) ;
+    }
+/*  46% {
+        transform:  translate(0%, 2%)  scaleX(1.40) scaleY(0.70) ;
+    } */
+    54% {
+        transform:  translate(0%, -2%)  scaleX(0.80) scaleY(1.20) ;
+    }
+    66% {
+        transform:  translate(0%, 0%)  scaleX(1.0) scaleY(1) ;
+    }
+    78% {
+        transform:  translate(0%, 0%)  scaleX(0.95) scaleY(1.05) ;
+    }
+    100% {
+        transform: inherit;
+    }
+}
+
+
+
+@keyframes hamburgerNaarBovenTop {
+    0%, 20% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-2000%);
+    }
+}
+
+@keyframes hamburgerNaarBovenBottom {
+    0% {
+        transform: translateY(0);
+    }
+    35% {
+        transform: translateY(400%);
+    }
+    100% {
+        transform: translateY(-1000%);
+    }
+}
+  
 
 
 
@@ -302,10 +431,10 @@ h1::after {
 /************responsive************/
 /**********************************/
 /**********************************/
-@media only screen and (max-width: 450px){
+/* @media only screen and (max-width: 450px){
 
 }
 
 @media only screen and (min-width: 1000px){
  
-}
+} */
