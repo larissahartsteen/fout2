@@ -14,9 +14,10 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 
 ## Bronnenlijst
-  1. -bron 1-
-  2. -bron 2-
-  3. -...-
+  1. http://thenewcode.com/1137/MinMaxing-Understanding-vMin-and-vMax-in-CSS
+  2. https://9elements.github.io/fancy-border-radius/
+  3. https://developer.mozilla.org/en-US/docs/Web/CSS/text-shadow
+  4. https://codepen.io/Mashbu01/pen/VmLVQR
 
 
 
@@ -81,6 +82,9 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 - Het is mij niet gelukt om de eerste stap van mijn storyboard te maken, daarom heb ik deze uiteindelijk toch veranderd
 <img src="readme-images/rotate.png" width="375px" alt="uitomst opdracht 1">
+
+- Doordat ik nog wat aanpassingen heb gemaakt aan het einde kreeg ik het niet meer voor elkaar om de burger gecentreerd op beeld te krijgen
+<img src="readme-images/burger-mobiel.png" width="375px" alt="uitomst opdracht 1">
 
 </details>
 
