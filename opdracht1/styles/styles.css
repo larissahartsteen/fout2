@@ -43,6 +43,33 @@
     --groen: #1b8639;
 }
 
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background: #0f0e17;
+        --rood: #d82300;
+        --oranje: #ff8730;
+        --geel: #72757e;
+        --bruin: #272727;
+        --groen: #474747;
+    }
+}
+
+
+
+
+
+/**********************************/
+/**********************************/
+/**********reduced motion**********/
+/**********************************/
+/**********************************/
+/* @media (prefers-reduced-motion: reduce) {
+    - {
+      animation-name: vegan-yoghurt-animation;
+      animation: none !important; /* !important will override ALL previous styling rules for that specific property on that element! 
+    }
+} */
+
 
 
 
@@ -140,8 +167,8 @@ body:hover ::after {
 body:hover ::before {
     animation-name: hamburgerSquashedTop-animation, hamburgerNaarBovenTop;
     /* animation-name: hamburgerSquashedTop-animation, hamburgerTop-animation; */
-    animation-duration: 2s, 2s;
-    animation-delay: 4.5s, 7.3s;
+    animation-duration: 2s, 0.3s;
+    animation-delay: 4.5s, 5.4s;
     animation-fill-mode: forwards;
 }
 
