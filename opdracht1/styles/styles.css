@@ -143,32 +143,32 @@ body:hover h1 {
 
 body:hover h1 span:first-of-type {
     animation-name: onderElkaarEerste-animation, textSquashed-animation;
-    animation-duration: 1s, 4.9s;
-    animation-delay: 3s, 5.12s;
+    animation-duration: 1s, 4.95s;
+    animation-delay: 3s, 5.05s;
     /* zodat de span aan het einde van de animatie op de laatste keyframe blijft staan */
     animation-fill-mode: forwards;
 }
 
 body:hover h1 span:last-of-type {
     animation-name: onderElkaarTweede-animation, textSquashed-animation;
-    animation-duration: 1s, 5s;
-    animation-delay: 3s, 5.14s;
+    animation-duration: 1s, 4.9s;
+    animation-delay: 3s, 5.2s;
     animation-fill-mode: forwards;
 }
 
 body:hover ::after {
     animation-name: hamburgerSquashedBottom-animation, hamburgerNaarBovenBottom;
     /* animation-name: hamburgerSquashedBottom-animation, hamburgerBottom-animation; */
-    animation-duration: 2s, 2.5s;
-    animation-delay: 4.5s, 6.55s;
+    animation-duration: 2s, 2.8s;
+    animation-delay: 4.5s, 6.4s;
     animation-fill-mode: forwards;
 }
 
 body:hover ::before {
     animation-name: hamburgerSquashedTop-animation, hamburgerNaarBovenTop;
     /* animation-name: hamburgerSquashedTop-animation, hamburgerTop-animation; */
-    animation-duration: 2s, 0.3s;
-    animation-delay: 4.5s, 5.4s;
+    animation-duration: 2s, 4.5s;
+    animation-delay: 4.5s, 6.5s;
     animation-fill-mode: forwards;
 }
 
@@ -447,21 +447,3 @@ h1::after {
         transform: translateY(-1000%);
     }
 }
-  
-
-
-
-
-
-/**********************************/
-/**********************************/
-/************responsive************/
-/**********************************/
-/**********************************/
-/* @media only screen and (max-width: 450px){
-
-}
-
-@media only screen and (min-width: 1000px){
- 
-} */

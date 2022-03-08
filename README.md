@@ -33,7 +33,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Je ambitie: 
   Aan deze technieken/punten wil ik werken:
   - Ik wil leren hoe ik het logo 'samen kan persen'
-  - Ik wil leren hoe ik met 'text shadow' de tekst onder elkaar kan zetten, in verschillende kleuren
+  - Ik wil leren hoe ik met de tekst onder elkaar kan zetten, in verschillende kleuren
   - Ik wil proberen de burger met css vorm te geven
   - Ik wil dat de animatie er vloeiend uit komt te zien
  
@@ -48,13 +48,28 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 
   ### Je uitkomst - karakteristiek screenshot(s):
-  <img src="readme-images/dummy-plaatje.svg" width="375px" alt="uitomst opdracht 1">
+  <img src="readme-images/titel.png" width="375px" alt="uitomst opdracht 1">
+  <img src="readme-images/textshadows.png" width="375px" alt="uitomst opdracht 1">
+  <img src="readme-images/onder-elkaar.png" width="375px" alt="uitomst opdracht 1">
+  <img src="readme-images/stretched.png" width="375px" alt="uitomst opdracht 1">
+  <img src="readme-images/burger.png" width="375px" alt="uitomst opdracht 1">
+  <img src="readme-images/burger-omhoog" width="375px" alt="uitomst opdracht 1">
+  <img src="readme-images/burger-omhoog2" width="375px" alt="uitomst opdracht 1">
+  <img src="readme-images/burger-omhoog3" width="375px" alt="uitomst opdracht 1">
 
 
   ### Dit ging goed/Heb ik geleerd: 
-  Korte omschrijving met plaatje(s)
+  - Ik heb geleerd hoe ik met textshadows een tekst/woorden onder elkaar kan zetten, met hun verschillende kleuren
+    <img src="readme-images/textshadows.png" width="375px" alt="top">
 
-  <img src="readme-images/dummy-plaatje.svg" width="375px" alt="top">
+  - Ik heb geleerd hoe je met border-radius een vorm met alleen css kan maken en animeren
+    <img src="readme-images/burger.png" width="375px" alt="top">
+
+  - Ik heb geleerd hoe ik meerdere animaties op één element kan zetten en laten afspelen
+    <!-- <img src="readme-images/dummy-plaatje.svg" width="375px" alt="top"> -->
+
+  - Ik heb geleerd hoe ik met transform elementen kan verplaatsen
+    <img src="readme-images/burger-omhoog2.png" width="375px" alt="top">
 
 
   ### Dit was lastig/Is niet gelukt:
